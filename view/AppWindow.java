@@ -12,4 +12,5 @@ public class AppWindow extends JFrame {
         var cp = getContentPane();
         cp.add(canvas, BorderLayout.NORTH);
     }
+
 }
