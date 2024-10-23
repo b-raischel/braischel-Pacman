@@ -8,18 +8,20 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
-import model.PacmanGame;
+import controller.App;
+
+//import model.PacmanGame;
 
 public class AppCanvas extends JPanel {
     
     public static final int WIDTH = 500;
     public static final int HEIGHT = 500;
 
-    private final PacmanGame pacman;
+    //private final PacmanGame pacman;
 
-    public AppCanvas(PacmanGame pacman) {
+    public AppCanvas() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
-        this.pacman = pacman;
+        //this.pacman = pacman;
     }
 
     @Override
@@ -29,5 +31,6 @@ public class AppCanvas extends JPanel {
 
         Graphics2D g2 = (Graphics2D) g;
         g2.setFont(new Font("Ariel", Font.BOLD, 16));
+        App.win.getGameState().updateCanvas(g2);
     }
 }
